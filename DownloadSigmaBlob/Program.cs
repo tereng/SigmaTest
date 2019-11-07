@@ -99,6 +99,8 @@ namespace DownloadSigmaBlob
                                 var result = mStream.ToArray();
                                 string converted = Encoding.UTF8.GetString(result, 0, result.Length);
 
+                                string[] words = converted.Split("\r\n");
+
                                 item.MeasurementData = new List<double>();
                                 item.MeasurementDay = DateTime.Now;
                                 item.MeasurementTime = new List<DateTime>();
